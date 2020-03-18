@@ -65,6 +65,7 @@ html {
     width: 50px;
 }
 
+<<<<<<< HEAD
 .wireframe {
     outline: 4px solid gray;
     text-align: left;
@@ -159,6 +160,8 @@ html {
     grid-row: 4;
 }
 
+=======
+>>>>>>> 7aa5067cacc7ee8880740550fe3e8b1a4fa62ed9
 
 /* Turn off parallax scrolling for tablets and phones */
 
