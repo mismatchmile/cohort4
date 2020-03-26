@@ -1,4 +1,4 @@
-import { numTest, stringTest, boolTest, arrayTest, objTest, undefTest } from './syntax.js'
+import { numTest, stringTest, boolTest, arrayTest, objTest, undefTest, ifElseTest, paramTest, returnTest } from './syntax.js'
 
 test('number', () => {
     expect(numTest()).toBe(3);
@@ -13,7 +13,7 @@ test('string', () => {
 });
 
 test('stringFail', () => {
-    expect(stringTest()).toBe("your mom");
+    expect(stringTest()).toBe("Bloog");
 });
 
 test('boolean', () => {
@@ -44,6 +44,30 @@ test('undefined', () => {
     expect(undefTest()).toBe(undefined);
 });
 
-test('undefinedTest', () => {
+test('undefinedFail', () => {
     expect(undefTest()).toBe("Bloog");
+});
+
+test('ifElse', () => {
+    expect(ifElseTest()).toBe(1);
+});
+
+test('ifElseFail', () => {
+    expect(ifElseTest()).toBe(2);
+});
+
+test('parameter', () => {
+    expect(paramTest()).toBe(3);
+});
+
+test('parameterFail', () => {
+    expect(paramTest()).toBe(2);
+});
+
+test('return', () => {
+    expect(returnTest()).toBe(1);
+});
+
+test('returnFail', () => {
+    expect(returnTest()).toBe(2);
 });

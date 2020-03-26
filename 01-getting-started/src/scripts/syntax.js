@@ -51,4 +51,22 @@ function undefTest() {
     return (undefined);
 }
 
-export { numTest, stringTest, boolTest, arrayTest, objTest, undefTest };
+function ifElseTest() {
+    let testNumber = 1;
+    if (testNumber === 1) {
+        return (1);
+    } else if (testNumber === 1) {
+        return (2);
+    }
+}
+
+function paramTest(x = 1, y = 2) {
+    return (x + y);
+}
+
+function returnTest() {
+    let x = 1;
+    return (x);
+}
+
+export { numTest, stringTest, boolTest, arrayTest, objTest, undefTest, ifElseTest, paramTest, returnTest };
