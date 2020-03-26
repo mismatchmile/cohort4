@@ -69,4 +69,35 @@ function returnTest() {
     return (x);
 }
 
-export { numTest, stringTest, boolTest, arrayTest, objTest, undefTest, ifElseTest, paramTest, returnTest };
+function arrayPopTest() {
+    let array2 = ["One", "Two", "Three"];
+    array2.pop();
+    return (array2[1]);
+}
+
+function arrayPushTest() {
+    let array3 = ["One", "Two", "Three"];
+    array3.push("Four");
+    return (array3[3]);
+}
+
+function arrayUpdateTest() {
+    let array4 = ["One", "Two", "Three"];
+    array4[1] = 1;
+    return (array4[0]);
+}
+
+export {
+    numTest,
+    stringTest,
+    boolTest,
+    arrayTest,
+    objTest,
+    undefTest,
+    ifElseTest,
+    paramTest,
+    returnTest,
+    arrayPopTest,
+    arrayPushTest,
+    arrayUpdateTest
+};

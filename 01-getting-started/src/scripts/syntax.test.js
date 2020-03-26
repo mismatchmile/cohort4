@@ -1,4 +1,17 @@
-import { numTest, stringTest, boolTest, arrayTest, objTest, undefTest, ifElseTest, paramTest, returnTest } from './syntax.js'
+import {
+    numTest,
+    stringTest,
+    boolTest,
+    arrayTest,
+    objTest,
+    undefTest,
+    ifElseTest,
+    paramTest,
+    returnTest,
+    arrayPopTest,
+    arrayPushTest,
+    arrayUpdateTest
+} from './syntax.js'
 
 test('number', () => {
     expect(numTest()).toBe(3);
@@ -70,4 +83,28 @@ test('return', () => {
 
 test('returnFail', () => {
     expect(returnTest()).toBe(2);
+});
+
+test('arrayPop', () => {
+    expect(arrayPopTest()).toBe("Two");
+});
+
+test('arrayPopFail', () => {
+    expect(arrayPopTest()).toBe(2);
+});
+
+test('arrayPush', () => {
+    expect(arrayPushTest()).toBe("Four");
+});
+
+test('arrayPushFail', () => {
+    expect(arrayPushTest()).toBe(4);
+});
+
+test('arrayUpdate', () => {
+    expect(arrayUpdateTest()).toBe(1);
+});
+
+test('arrayUpdateFail', () => {
+    expect(arrayUpdateTest()).toBe("One");
 });
