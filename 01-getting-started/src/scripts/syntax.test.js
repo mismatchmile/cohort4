@@ -10,7 +10,14 @@ import {
     returnTest,
     arrayPopTest,
     arrayPushTest,
-    arrayUpdateTest
+    arrayUpdateTest,
+    forTest,
+    forInTest,
+    whileTest,
+    doWhileTest,
+    forEachTest,
+    declareObjectTest,
+    lookupKeyTest
 } from './syntax.js'
 
 test('number', () => {
@@ -107,4 +114,60 @@ test('arrayUpdate', () => {
 
 test('arrayUpdateFail', () => {
     expect(arrayUpdateTest()).toBe("One");
+});
+
+test('for', () => {
+    expect(forTest()).toBe(15);
+});
+
+test('forFail', () => {
+    expect(forTest()).toBe(69);
+});
+
+test('forIn', () => {
+    expect(forInTest()).toBe("One");
+});
+
+test('forInFail', () => {
+    expect(forInTest()).toBe(1);
+});
+
+test('while', () => {
+    expect(whileTest()).toBe(15);
+});
+
+test('whileFail', () => {
+    expect(whileTest()).toBe(82);
+});
+
+test('doWhile', () => {
+    expect(doWhileTest()).toBe(153);
+});
+
+test('doWhileFail', () => {
+    expect(doWhileTest()).toBe(82);
+});
+
+test('forEach', () => {
+    expect(forEachTest()).toBe(10);
+});
+
+test('forEachFail', () => {
+    expect(forEachTest()).toBe(43);
+});
+
+test('declareObject', () => {
+    expect(declareObjectTest()).toBe("Fiat500");
+});
+
+test('declareObjectFail', () => {
+    expect(declareObjectTest()).toBe("Glorb");
+});
+
+test('lookupKey', () => {
+    expect(lookupKeyTest()).toBe("white");
+});
+
+test('lookupKeyFail', () => {
+    expect(lookupKeyTest()).toBe("black");
 });

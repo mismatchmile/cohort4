@@ -87,6 +87,61 @@ function arrayUpdateTest() {
     return (array4[0]);
 }
 
+function forTest() {
+    let loop = 0;
+    for (let x = 1; x <= 5; x++) {
+        loop = loop + x;
+    }
+    return (loop);
+}
+
+function forInTest() {
+    let loop2 = { property1: "One", property2: "Two", property3: "Three" };
+    for (let item in loop2) {
+        return (loop2[item])
+    }
+}
+
+function whileTest() {
+    let loop3 = 0;
+    let loop3a = 1;
+    while (loop3a <= 5) {
+        loop3 += loop3a;
+        loop3a++;
+    }
+    return (loop3);
+}
+
+function doWhileTest() {
+    let loop4 = 0;
+    let loop4a = 1;
+    do {
+        loop4 += loop4a;
+        loop4a++;
+    } while (loop4a <= 17)
+    return (loop4);
+}
+
+function forEachTest() {
+    let array5 = [1, 2, 3, 4];
+    array5.forEach(forEachFunc)
+
+    function forEachFunc(item, index, arr) {
+        arr[index] = item * 10;
+    }
+    return (array5[0]);
+}
+
+function declareObjectTest() {
+    let object = { type: "Fiat", model: "500", color: "white" };
+    return (object.type + object.model);
+}
+
+function lookupKeyTest() {
+    let object = { type: "Fiat", model: "500", color: "white" };
+    return (object.color);
+}
+
 export {
     numTest,
     stringTest,
@@ -99,5 +154,12 @@ export {
     returnTest,
     arrayPopTest,
     arrayPushTest,
-    arrayUpdateTest
+    arrayUpdateTest,
+    forTest,
+    forInTest,
+    whileTest,
+    doWhileTest,
+    forEachTest,
+    declareObjectTest,
+    lookupKeyTest
 };
