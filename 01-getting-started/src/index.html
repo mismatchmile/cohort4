@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <title>FSD</title>
 </head>
 
@@ -30,6 +29,8 @@
             <a href="#home" class="w3-bar-item w3-button">HOME</a>
             <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
             <a href="#idSize" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SIZE</a>
+            <a href="#idCalc" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> CALCULATOR</a>
+            <a href="#idTax" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TAX</a>
             <a href="https://www.evolveu.ca" class="w3-bar-item w3-button w3-hide-small" target="_blank"><i class="fa fa-envelope"></i> CONTACT</a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
                 <i class="fa fa-search"></i>
@@ -96,73 +97,102 @@
         <p id="idNumberSizexx"></p>
     </div>
 
-<<<<<<< HEAD
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="bgimg-2 w3-display-container w3-opacity-min" id="idCalc">
         <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">My Calculator</span>
-        <div align="center">
-            <br>
-        <form name="calculator" >
-        <div class="wireframe">
-            <input type="text" name="display" size="11" id="display" disabled>
+            <div align="center">
+                <br>
+                <form name="calculator">
+                    <div class="wireframe">
+                        <input type="text" name="display" size="11" id="display" disabled>
+                    </div>
+                    <div class="grid-container">
+                        <div class="cell0">
+                            <input type="button" class="button" name="one" value="1" onclick="calculator.display.value += '1'">
+                        </div>
+                        <div class="cell1">
+                            <input type="button" class="button" name="two" value="2" onclick="calculator.display.value += '2'">
+                        </div>
+                        <div class="cell2">
+                            <input type="button" class="button" name="three" value="3" onclick="calculator.display.value += '3'">
+                        </div>
+                        <div class="cell3">
+                            <input type="button" class="button" class="operator" name="add" value="+" onclick="calculator.display.value += '+'">
+                        </div>
+                        <div class="cell4">
+                            <input type="button" class="button" name="four" value="4" onclick="calculator.display.value += '4'">
+                        </div>
+                        <div class="cell5">
+                            <input type="button" class="button" name="five" value="5" onclick="calculator.display.value += '5'">
+                        </div>
+                        <div class="cell6">
+                            <input type="button" class="button" name="six" value="6" onclick="calculator.display.value += '6'">
+                        </div>
+                        <div class="cell7">
+                            <input type="button" class="button" class="operator" name="subtract" value="-" onclick="calculator.display.value += '-'">
+                        </div>
+                        <div class="cell8">
+                            <input type="button" class="button" name="seven" value="7" onclick="calculator.display.value += '7'">
+                        </div>
+                        <div class="cell9">
+                            <input type="button" class="button" name="eight" value="8" onclick="calculator.display.value += '8'">
+                        </div>
+                        <div class="cell10">
+                            <input type="button" class="button" name="nine" value="9" onclick="calculator.display.value += '9'">
+                        </div>
+                        <div class="cell11">
+                            <input type="button" class="button" class="operator" name="multiply" value="x" onclick="calculator.display.value += '*'">
+                        </div>
+                        <div class="cell12">
+                            <input type="button" class="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''">
+                        </div>
+                        <div class="cell13">
+                            <input type="button" class="button" name="zero" value="0" onclick="calculator.display.value += '0'">
+                        </div>
+                        <div class="cell14">
+                            <input type="button" class="button" name="compute" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+                        </div>
+                        <div class="cell15">
+                            <input type="button" class="button" class="operator" name="divide" value="/" onclick="calculator.display.value += '/'">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="grid-container">
-            <div class="cell0">
-                <input type="button" class="button" name="one" value="1" onclick="calculator.display.value += '1'">
-            </div>
-            <div class="cell1">
-                <input type="button" class="button" name="two" value="2" onclick="calculator.display.value += '2'">
-            </div>
-            <div class="cell2">
-                <input type="button" class="button" name="three" value="3" onclick="calculator.display.value += '3'">
-            </div>
-            <div class="cell3">
-                <input type="button" class="button" class="operator" name="add" value="+" onclick="calculator.display.value += '+'">
-            </div>
-            <div class="cell4">
-                <input type="button" class="button" name="four" value="4" onclick="calculator.display.value += '4'">
-            </div>
-            <div class="cell5">
-                <input type="button" class="button" name="five" value="5" onclick="calculator.display.value += '5'">
-            </div>
-            <div class="cell6">
-                <input type="button" class="button" name="six" value="6" onclick="calculator.display.value += '6'">
-            </div>
-            <div class="cell7">
-                <input type="button" class="button" class="operator" name="subtract" value="-" onclick="calculator.display.value += '-'">
-            </div>
-            <div class="cell8">
-                <input type="button" class="button" name="seven" value="7" onclick="calculator.display.value += '7'">
-            </div>
-            <div class="cell9">
-                <input type="button" class="button" name="eight" value="8" onclick="calculator.display.value += '8'">
-            </div>
-            <div class="cell10">
-                <input type="button" class="button" name="nine" value="9" onclick="calculator.display.value += '9'">
-            </div>
-            <div class="cell11">
-                <input type="button" class="button" class="operator" name="multiply" value="x" onclick="calculator.display.value += '*'">
-            </div>
-            <div class="cell12">
-                <input type="button" class="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''">
-            </div>
-            <div class="cell13">
-                <input type="button" class="button" name="zero" value="0" onclick="calculator.display.value += '0'">
-            </div>
-            <div class="cell14">
-                <input type="button" class="button" name="compute" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
-            </div>
-            <div class="cell15">
-                <input type="button" class="button" class="operator" name="divide" value="/" onclick="calculator.display.value += '/'">
-            </div>
-        </div>
-    </form>
-    </div>
-    </div>
     </div>
 
-=======
->>>>>>> 7aa5067cacc7ee8880740550fe3e8b1a4fa62ed9
+    <!-- <p class="title"><b>Federal Income Tax Calculator</b></p> -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min" id="idTax">
+        <div class="w3-display-middle">
+            <div align=center>
+                <span class="w3-xxlarge w3-text-white w3-wide">Income Tax</span>
+                <br>
+                <p class="input">Gross Income: <input type="number" id="Income" name="Income"> <input type="button" class="button2" id="Calculate" name="Calculate" value="=" onclick="bracket()"> <i id="result">  Income Tax</i></p>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="bgimg-2 w3-display-container w3-opacity-min" id="idTax">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">Income Tax</span>
+            <br>
+            <br>
+            <div align="middle">
+                <form name="tax">
+                    <div class="wireframe">
+                        <input type="text" name="display" size="11" id="incomeTax">
+                    </div>
+                    <div class="calculateTax">
+                        <input type="button" class="calculateTax" value="Calculate" name="calculate" onclick="bracket()">
+                    </div>
+                    <div class="taxResult">
+                        <p type="text" class="taxResult" name="result"></p>
+                    </div>
+            </div>
+        </div>
+    </div> -->
+
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -204,7 +234,48 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
-    </script>
+
+        function bracket() {
+            let income = document.getElementById('Income').value;
+
+            if (income < 48535) {
+                let tax = (income * 0.15);
+                let result = (tax);
+                result = result.toFixed(2);
+                document.getElementById("result").innerHTML = result;
+            } else if (income > 48535 && income < 97069) {
+                let delta = (48535 * 0.15);
+                let delta2 = ((income - 48535) * 0.205);
+                let result = (delta + delta2);
+                result = result.toFixed(2);
+                document.getElementById("result").innerHTML = result;
+            } else if (income > 48535 && income < 150473) {
+                let delta = (48535 * 0.15);
+                let delta2 = ((97069 - 48535) * 0.205);
+                let delta3 = ((income - 97069) * 0.26);
+                let result = (delta + delta2 + delta3);
+                result = result.toFixed(2);
+                document.getElementById("result").innerHTML = result;
+            } else if (income > 48535 && income < 214368) {
+                let delta = (48535 * 0.15);
+                let delta2 = ((97069 - 48535) * 0.205);
+                let delta3 = ((150473 - 97069) * 0.26);
+                let delta4 = ((income - 150473) * 0.29);
+                let result = (delta + delta2 + delta3 + delta4);
+                result = result.toFixed(2);
+                document.getElementById("result").innerHTML = result;
+            } else if (income > 214368) {
+                let delta = (48535 * 0.15);
+                let delta2 = ((97069 - 48535) * 0.205);
+                let delta3 = ((150473 - 97069) * 0.26);
+                let delta4 = ((214368 - 150473) * 0.29);
+                let delta5 = ((income - 214368) * 0.33);
+                let result = (delta + delta2 + delta3 + delta4 + delta5);
+                result = result.toFixed(2);
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+    </script>]
 
 </body>
 
