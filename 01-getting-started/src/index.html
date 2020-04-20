@@ -31,6 +31,7 @@
             <a href="#idSize" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SIZE</a>
             <a href="#idCalc" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> CALCULATOR</a>
             <a href="#idTax" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TAX</a>
+            <a href="#idArray" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ARRAYS</a>
             <a href="https://www.evolveu.ca" class="w3-bar-item w3-button w3-hide-small" target="_blank"><i class="fa fa-envelope"></i> CONTACT</a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
                 <i class="fa fa-search"></i>
@@ -41,6 +42,9 @@
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
             <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
             <a href="#idSize" class="w3-bar-item w3-button" onclick="toggleFunction()">SIZE</a>
+            <a href="#idCalc" class="w3-bar-item w3-button" onclick="toggleFunction()">CALCULATOR</a>
+            <a href="#idTax" class="w3-bar-item w3-button" onclick="toggleFunction()">TAX</a>
+            <a href="#idArray" class="w3-bar-item w3-button" onclick="toggleFunction()">ARRAYS</a>
             <a href="https://www.evolveu.ca" class="w3-bar-item w3-button" onclick="toggleFunction()" target="_blank">CONTACT</a>
             <a href="#" class="w3-bar-item w3-button">SEARCH</a>
         </div>
@@ -161,37 +165,47 @@
         </div>
     </div>
 
-    <!-- <p class="title"><b>Federal Income Tax Calculator</b></p> -->
     <div class="bgimg-2 w3-display-container w3-opacity-min" id="idTax">
-        <div class="w3-display-middle">
-            <div align=center>
-                <span class="w3-xxlarge w3-text-white w3-wide">Income Tax</span>
-                <br>
-                <p class="input">Gross Income: <input type="number" id="Income" name="Income"> <input type="button" class="button2" id="Calculate" name="Calculate" value="=" onclick="bracket()"> <i id="result">  Income Tax</i></p>
-                </p>
-            </div>
+        <div class="w3-display-middle" align=center>
+            <span class="w3-xxlarge w3-text-white w3-wide">Income Tax</span>
+            <br>
+            <p class="input">Gross Income: <input type="number" id="Income" name="Income"> <input type="button" class="button2" id="Calculate" name="Calculate" value="=" onclick="bracket()"> <i id="result">  Income Tax</i></p>
+            </p>
         </div>
     </div>
 
-    <!-- <div class="bgimg-2 w3-display-container w3-opacity-min" id="idTax">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">Income Tax</span>
-            <br>
-            <br>
-            <div align="middle">
-                <form name="tax">
-                    <div class="wireframe">
-                        <input type="text" name="display" size="11" id="incomeTax">
-                    </div>
-                    <div class="calculateTax">
-                        <input type="button" class="calculateTax" value="Calculate" name="calculate" onclick="bracket()">
-                    </div>
-                    <div class="taxResult">
-                        <p type="text" class="taxResult" name="result"></p>
-                    </div>
+    <!-- w3-display-container -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min" id="idArray" align=left>
+        <div class="w3-display-middle" id="idArray" align=left>
+            <div id="mainDiv" class="card2">
+                <div>
+                    <h1 style="font-family:'Times New Roman'"><b>Working with Arrays</b></h1>
+                </div>
+                <div>
+                    <input type="text" id="arrayInput">
+                </div>
+                <div class="input2">
+                    <button id="arrayAdd">Add</button>
+                    <button id="arrayShow">Show</button>
+                    <button id="arrayTotal">Total</button>
+                    <button id="arrayClear">Clear</button>
+                </div>
+                <div>
+                    <h4 style="font-family:'Times New Roman'">Message Area</h2>
+                </div>
+            </div>
+            <div class="card2">
+                <div>
+                    <h1 style="font-family:'Times New Roman'">Here are my fruit</h1>
+                </div>
+                <ul id="fruitDiv">
+
+                </ul>
             </div>
         </div>
-    </div> -->
+    </div>
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+    </div>
 
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
@@ -275,7 +289,7 @@
                 document.getElementById("result").innerHTML = result;
             }
         }
-    </script>]
+    </script>
 
 </body>
 

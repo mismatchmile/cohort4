@@ -203,6 +203,19 @@ html {
     padding: 0px
 }
 
+.input2 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.card2 {
+    color: black;
+    width: 400px;
+    border: solid;
+    padding: 0px 0px 0px 5px;
+    background-color: white
+}
+
 
 /* Turn off parallax scrolling for tablets and phones */
 
