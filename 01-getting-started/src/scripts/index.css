@@ -1,0 +1,19 @@
+.button {
+    color: black;
+    background-color: white;
+    text-align: left;
+    padding: 0px
+}
+
+.input {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.card {
+    color: black;
+    width: 400px;
+    border: solid;
+    padding: 0px 0px 0px 5px;
+    background-color: white
+}
