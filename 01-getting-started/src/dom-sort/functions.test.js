@@ -7,6 +7,15 @@ const arrTest = [
     { key: 'erin', fname: "Erin", lname: "Shumlich", comp: "AHS" },
 ];
 
+test('Test lookup', () => {
+    console.log('hello world');
+    const div = funcs.createCard(arrTest[1])
+    expect(funcs.lookup(arrTest, 'lor', 'fname')).toBe("Lorraine");
+    expect(funcs.lookup(arrTest, 'lor', 'comp')).toBe("Lean Minds");
+    expect(funcs.lookup(arrTest, 'jes', 'fname')).toBe("Jessica");
+    expect(funcs.lookup(arrTest, 'jxxes', 'fnaxxme')).toBe("");
+});
+
 test('test plumbing', () => {
     console.log('hello world');
     expect(funcs.lookup(arrTest, 'lor', 'fname')).toBe("Lorraine");

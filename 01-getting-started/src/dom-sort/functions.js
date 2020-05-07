@@ -8,6 +8,13 @@ const functions = {
             }
         }
     }
+
+    createCard(person) {
+        const div = document.createElement('div');
+        div.appendChild(document.createTextNode(person.fname));
+        div.className = 'clCard';
+        return div;
+    }
 };
 
 export default functions;

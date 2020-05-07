@@ -1,22 +1,40 @@
-const numbersArray = ['1', '2', '3', '4'];
+const functions = {
 
-arrayAdd.addEventListener("click", arrayAddListener)
+    lookup(array, key, number) {
 
-function funcArrayAdd() {
-    numbersArray.push(numberItem)
-}
+        for (let i in array) {
+            if (array[i].key === key) {
+                return array[i][number];
+            }
+        }
+        return '';
+    },
 
-// function arrayAdd() {
-//     let arrayItem = document.getElementById(arrayInput)
-//     numbersArray.push("arrayItem")
-// }
+    // createCard(person) {
+    //     const div = document.createElement('div');
+    //     div.appendChild(document.createTextNode(person.fname));
+    //     div.className = 'clCard';
+    //     div.setAttribute('key', person.key);
+    //     const button = document.createElement('button');
+    //     button.appendChild(document.createTextNode("do some stuff"));
+    //     button.setAttribute('todo', 'addafter');
+    //     div.appendChild(button);
+        
+    //     return div;
+    // },
 
-function arrayAddListener() {
-    let numberItem = document.getElementById('arrayInput')
-    console.log('add button')
-    funcArrayAdd(numberItem)
-}
+    // createAllCards(div, array) {
 
-export {
-    funcArrayAdd
+    //     while(div.firstChild) {
+    //         div.firstChild.remove();
+    //     }
+
+    //     array.forEach(p => {
+    //         const card = functions.createCard(p);
+    //         div.appendChild(card);
+    //         // console.log(p);
+    //     });
+    // }
 };
+
+export default functions;
