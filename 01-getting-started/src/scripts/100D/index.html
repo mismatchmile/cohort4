@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script type="module" src="./index.js"></script> -->
     <link rel="stylesheet" type="text/css" href="./index.css">
     <title>Array Test</title>
 </head>
@@ -28,13 +27,38 @@
         </div>
     </div>
 
+<br>
+<br>
+
+    <div id="secondDiv" class="card" align="left">
+        <div>
+            <h1 style="font-family:'Times New Roman'"><b>Working with Dictionaries</b></h1>
+        </div>
+        <div>
+            <input type=text name="secondInput" value="" id="secondInput">
+        </div>
+        <div class="button">
+            <button onclick="lookup()">Lookup</button>
+        </div>
+        <div>
+            <h2 style="font-family:'Times New Roman'" id="secondMessageArea">Message Area</h2>
+        </div>
+    </div>
+
     <script>
+
         let arrayTest = [1,2,3,4,5];
+
+        let objectTest = [
+            { abreviation: "ab", province: "Alberta" },
+            { abreviation: "bc", province: "British Columbia" },
+            { abreviation: "mn", province: "Manitoba" },
+            { abreviation: "sk", province: "Saskatchewan" },
+            { abreviation: "on", province: "Ontario" }
+        ];
         
         function addNumber() {
-            console.log("Inside addNumber");
             var x = document.getElementById("input").value;
-            console.log(parseInt(x));
 
             if (isNaN(x)) {
                 document.getElementById("messageArea").innerHTML = 'That is not a number';
@@ -46,29 +70,36 @@
         }
 
         function showArray() {
-            console.log("Inside showArray");
             var y = arrayTest.join(" , ");
-            console.log(y);
             document.getElementById("messageArea").innerHTML = y;
         }
 
         function totalArray() {
-            console.log("Inside totalArray");
             var sum = arrayTest.reduce(function(a,b) {
                 return a+b;
             }, 0);
-            console.log(sum);
             document.getElementById("messageArea").innerHTML = sum;
         }
 
         function clearArray() {
-            console.log("Inside clearArray");
             arrayTest=[];
-            console.log(arrayTest);
             document.getElementById("messageArea").innerHTML = 'The array has been cleared';
         }
+
+        function lookup() {
+            var v = document.getElementById("secondInput").value.toLowerCase();
+            const findProv = function(myProvs, abreviation) {
+                const provFound = myProvs.find(function(prov, index) {
+                    return prov.abreviation.toLowerCase() === abreviation.toLowerCase()
+            })
+            return provFound;
+            }
+            var printMe = findProv(objectTest, v);
+            var result = Object.values(printMe);
+            document.getElementById("secondMessageArea").innerHTML = result
+        }
+
     </script>
-    <script type="module" src="./array.js"></script>
 </body>
 
 </html>

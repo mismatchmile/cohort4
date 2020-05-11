@@ -1,40 +1,26 @@
-const functions = {
+const newTodos = [
+    { title: 'Buy bread', isDone: false },
+    { title: 'Go to gym', isDone: false },
+    { title: 'Record YouTube videos', isDone: true }
+]
 
-    lookup(array, key, number) {
+const findTodo = function(myTodos, title) {
+    const titleReturned = myTodos.find(function(todo, index) {
+        return todo.title.toLowerCase() === title.toLowerCase()
+    })
+    return titleReturned
+}
 
-        for (let i in array) {
-            if (array[i].key === key) {
-                return array[i][number];
-            }
-        }
-        return '';
-    },
+let printMe = findTodo(newTodos, 'Go to gym')
+console.log(printMe);
 
-    // createCard(person) {
-    //     const div = document.createElement('div');
-    //     div.appendChild(document.createTextNode(person.fname));
-    //     div.className = 'clCard';
-    //     div.setAttribute('key', person.key);
-    //     const button = document.createElement('button');
-    //     button.appendChild(document.createTextNode("do some stuff"));
-    //     button.setAttribute('todo', 'addafter');
-    //     div.appendChild(button);
-        
-    //     return div;
-    // },
+//Method1
+// const findTodo = function(myTodos, title) {
+//     const index = myTodos.findIndex(function(todo, index) {
+//         return todo.title.toLowerCase() === title.toLowerCase()
+//     })
+//     return myTodos[index]
+// }
 
-    // createAllCards(div, array) {
-
-    //     while(div.firstChild) {
-    //         div.firstChild.remove();
-    //     }
-
-    //     array.forEach(p => {
-    //         const card = functions.createCard(p);
-    //         div.appendChild(card);
-    //         // console.log(p);
-    //     });
-    // }
-};
-
-export default functions;
+// let printMe = findTodo(newTodos, 'Go to gym')
+// console.log(printMe);
