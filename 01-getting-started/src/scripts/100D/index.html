@@ -20,8 +20,8 @@
         <div class="button">
             <button onclick="addNumber()">Add</button>
             <button onclick="showArray()">Show</button>
-            <!-- <button id="arrayTotal">Total</button>
-            <button id="arrayClear">Clear</button> -->
+            <button onclick="totalArray()">Total</button>
+            <button onclick="clearArray()">Clear</button>
         </div>
         <div>
             <h2 style="font-family:'Times New Roman'" id="messageArea">Message Area</h2>
@@ -29,13 +29,7 @@
     </div>
 
     <script>
-        const arrayTest = [
-            {key: 0, number: 1},
-            {key: 1, number: 2},
-            {key: 2, number: 3},
-            {key: 3, number: 4},
-            {key: 4, number: 5},
-        ];
+        let arrayTest = [1,2,3,4,5];
         
         function addNumber() {
             console.log("Inside addNumber");
@@ -46,13 +40,32 @@
                 document.getElementById("messageArea").innerHTML = 'That is not a number';
             }
             else {
-            arrayTest.push({key: arrayTest.length, number: parseInt(x)})
+            arrayTest.push(parseInt(x));
             document.getElementById("messageArea").innerHTML = 'The number has been added to the array';
             }
         }
 
         function showArray() {
             console.log("Inside showArray");
+            var y = arrayTest.join(" , ");
+            console.log(y);
+            document.getElementById("messageArea").innerHTML = y;
+        }
+
+        function totalArray() {
+            console.log("Inside totalArray");
+            var sum = arrayTest.reduce(function(a,b) {
+                return a+b;
+            }, 0);
+            console.log(sum);
+            document.getElementById("messageArea").innerHTML = sum;
+        }
+
+        function clearArray() {
+            console.log("Inside clearArray");
+            arrayTest=[];
+            console.log(arrayTest);
+            document.getElementById("messageArea").innerHTML = 'The array has been cleared';
         }
     </script>
     <script type="module" src="./array.js"></script>
