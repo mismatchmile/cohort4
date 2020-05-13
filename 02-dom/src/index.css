@@ -1,0 +1,22 @@
+.clCard {
+    border: solid;
+    padding: 1px 10px 1px 10px;
+    text-align: center;
+    width: 200px;
+    background: white;
+}
+
+.buttons {
+    text-align: center;
+}
+
+ol {
+    text-align: left;
+    display: block;
+    list-style-type: decimal;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 90px;
+    margin-right: 0;
+    padding-left: 0;
+}
