@@ -6,11 +6,15 @@ document.getElementById("show").onclick = showItem;
 document.getElementById("add").onclick = addItem;
 
 function showItem() {
-    console.log('Inside show')
     var x = document.getElementById("list").children;
-    console.log(x)
+    console.log(x);
 }
 
 function addItem() {
-    console.log('Inside add')
+    var myList = document.getElementById("list");
+    var listLength = myList.getElementsByTagName("LI").length+1;
+    var y = document.createElement("LI");
+    var z = document.createTextNode("Item " + listLength++);
+    y.appendChild(z);
+    document.getElementById('list').appendChild(y)
 }
