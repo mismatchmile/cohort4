@@ -20,3 +20,28 @@ ol {
     margin-right: 0;
     padding-left: 0;
 }
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.leftCards {
+    border:solid;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.rightCards {
+    border:solid;
+    padding: 10px;
+    margin-left: 5px;
+    text-align: center;
+    height: 427px
+}
