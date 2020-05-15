@@ -21,9 +21,18 @@ ol {
     padding-left: 0;
 }
 
-.column {
+.column1 {
     float: left;
     width: 50%;
+    overflow-y: scroll;
+    height: 85vh
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    overflow-y: scroll;
+    height: 85vh
 }
 
 .row:after {
@@ -43,5 +52,5 @@ ol {
     padding: 10px;
     margin-left: 5px;
     text-align: center;
-    height: 427px
+    height: 270px
 }
